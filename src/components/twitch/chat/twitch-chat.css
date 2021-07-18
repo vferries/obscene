@@ -1,0 +1,19 @@
+.message {
+  padding: .5rem 2rem;
+  overflow-wrap: anywhere;
+}
+
+img {
+  pointer-events: all;
+  display: inline-flex;
+  font-style: normal;
+  justify-content: center;
+  align-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+  margin: -.5rem 0;
+}
