@@ -1,14 +1,13 @@
 import { Component, h, State } from '@stencil/core';
 import tmi from 'tmi.js';
-import { TMI_OAUTH_TOKEN, TMI_USER } from '../../../global/constants';
 
 type Message = { user: string, message: string };
 
 // Define configuration options
 const opts = {
   identity: {
-    username: TMI_USER,
-    password: TMI_OAUTH_TOKEN,
+    username: process.env.TMI_USER,
+    password: process.env.TMI_OAUTH_TOKEN,
   },
   channels: ['enveillecode'],
 };
