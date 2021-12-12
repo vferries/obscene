@@ -14,6 +14,8 @@ export namespace Components {
     }
     interface ObsTwitchChat {
     }
+    interface ObsTwitchCommand {
+    }
 }
 declare global {
     interface HTMLObsHomeElement extends Components.ObsHome, HTMLStencilElement {
@@ -40,11 +42,18 @@ declare global {
         prototype: HTMLObsTwitchChatElement;
         new (): HTMLObsTwitchChatElement;
     };
+    interface HTMLObsTwitchCommandElement extends Components.ObsTwitchCommand, HTMLStencilElement {
+    }
+    var HTMLObsTwitchCommandElement: {
+        prototype: HTMLObsTwitchCommandElement;
+        new (): HTMLObsTwitchCommandElement;
+    };
     interface HTMLElementTagNameMap {
         "obs-home": HTMLObsHomeElement;
         "obs-root": HTMLObsRootElement;
         "obs-scenes": HTMLObsScenesElement;
         "obs-twitch-chat": HTMLObsTwitchChatElement;
+        "obs-twitch-command": HTMLObsTwitchCommandElement;
     }
 }
 declare namespace LocalJSX {
@@ -56,11 +65,14 @@ declare namespace LocalJSX {
     }
     interface ObsTwitchChat {
     }
+    interface ObsTwitchCommand {
+    }
     interface IntrinsicElements {
         "obs-home": ObsHome;
         "obs-root": ObsRoot;
         "obs-scenes": ObsScenes;
         "obs-twitch-chat": ObsTwitchChat;
+        "obs-twitch-command": ObsTwitchCommand;
     }
 }
 export { LocalJSX as JSX };
@@ -71,6 +83,7 @@ declare module "@stencil/core" {
             "obs-root": LocalJSX.ObsRoot & JSXBase.HTMLAttributes<HTMLObsRootElement>;
             "obs-scenes": LocalJSX.ObsScenes & JSXBase.HTMLAttributes<HTMLObsScenesElement>;
             "obs-twitch-chat": LocalJSX.ObsTwitchChat & JSXBase.HTMLAttributes<HTMLObsTwitchChatElement>;
+            "obs-twitch-command": LocalJSX.ObsTwitchCommand & JSXBase.HTMLAttributes<HTMLObsTwitchCommandElement>;
         }
     }
 }

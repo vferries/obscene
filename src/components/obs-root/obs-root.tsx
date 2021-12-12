@@ -15,6 +15,7 @@ export class ObsRoot {
               <stencil-route url="/" component="obs-home" exact={true} />
               <stencil-route url="/scenes" component="obs-scenes" />
               <stencil-route url="/chat" component="obs-twitch-chat" />
+              <stencil-route url="/command" component="obs-twitch-command" />
             </stencil-route-switch>
           </stencil-router>
         </main>

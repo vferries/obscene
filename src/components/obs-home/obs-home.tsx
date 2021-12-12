@@ -21,6 +21,10 @@ export class ObsHome {
         <stencil-route-link url="/chat">
           <button>Twitch chat</button>
         </stencil-route-link>
+
+        <stencil-route-link url="/command">
+          <button>Twitch command</button>
+        </stencil-route-link>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import { Config } from '@stencil/core';
 import nodePolyfills from 'rollup-plugin-node-polyfills';
+import { env } from '@alepop/stencil-env';
 
 // https://stenciljs.com/docs/config
 
@@ -18,6 +19,7 @@ export const config: Config = {
   rollupPlugins: {
     after: [
       nodePolyfills(),
+      env()
     ]
   }
 };
